@@ -15,4 +15,12 @@ values ('Peter', 'Pan'),
        ('Donald', 'Trump'),
        ('George', 'Busch');
 
-
+create table department
+(
+    id int auto_increment PRIMARY KEY ,
+    name varchar(255)
+);
+INSERT INTO department( name)
+values ('department'),
+       ('dep'),
+       ('artment');

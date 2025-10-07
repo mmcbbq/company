@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET') {
     $fname = $result['fname'];
     $lname = $result['lname'];
     $id = $result['id'];
-    var_dump($result);
+
 
 ?>
 
