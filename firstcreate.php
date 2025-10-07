@@ -24,8 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET'){
 </html>
 
 <?php
-
-
 }elseif ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -37,8 +35,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET'){
     $stmt->execute();
     echo 'Hier soll es in die DB';
 }
-
-
 ?>
 
 

@@ -1,7 +1,3 @@
-
-
-
-
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === 'GET') {
@@ -18,9 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET') {
     $lname = $result['lname'];
     $id = $result['id'];
     var_dump($result);
-
-
-
 
 ?>
 
@@ -54,9 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET') {
     $stmt->bindParam(':lname',$lname);
     $stmt->bindParam(':id',$id);
     $stmt->execute();
-
-
-
 }
-
 ?>
