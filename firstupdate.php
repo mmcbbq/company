@@ -1,8 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === 'GET') {
-
-
     $id = $_GET['id'];
     $conn = new PDO('mysql:host=localhost;dbname=company', 'phpstorm', '123456');
     $sql = 'Select * from employees where id = :id';
@@ -13,8 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET') {
     $fname = $result['fname'];
     $lname = $result['lname'];
     $id = $result['id'];
-
-
 ?>
 
 <!doctype html>

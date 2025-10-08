@@ -24,3 +24,6 @@ INSERT INTO department( name)
 values ('department'),
        ('dep'),
        ('artment');
+
+
+ALTER TABLE department add column is_hiring bool default false;
