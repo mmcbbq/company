@@ -26,4 +26,5 @@ values ('department'),
        ('artment');
 
 
-ALTER TABLE department add column is_hiring bool default false;
+ALTER TABLE department add column is_hiring bool default '0';
+ALTER TABLE department add column work_mode varchar(255) default 'onsite';

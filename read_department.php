@@ -18,9 +18,17 @@ function createTable(array $data, array|false $ueberschrifeten = false, string $
             $color = $farbe_2;
         }
         $string .= "<tr  style='background-color: $color'>";
-        foreach ($user as $item) {
+        foreach ($user as $key => $item) {
             $string .= "<td>";
-            $string .= $item;
+            if ($key === 'is_hiring') {
+                if ($item === 0) {
+                    $string .= '&#10060';
+                } else {
+                    $string .= '✔️';
+                }
+            }else{
+                $string .= $item;
+            }
             $string .= "</td>";
         }
         $string .= "<td class='link' style='background-color: white'>";
