@@ -54,6 +54,10 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 # Das Ergebnis des SQLs in form eines nummerischen Arrays (fetchAll) mit assoziativen Arrays als Elementen (PDO::FETCH_ASSOC)  in eine variable
 $array = $stmt->fetchAll(PDO::FETCH_ASSOC);
+echo "<pre>";
+var_dump($_SERVER);
+echo "</pre>";
+
 
 ?>
 

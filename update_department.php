@@ -69,5 +69,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     header('Location: read_department.php');
     exit();
 }
+
+
+$stamp = new DateTime('now');
+
+
 ?>
 
