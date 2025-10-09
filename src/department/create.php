@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $stmt->bindParam(':is_hiring', $is_hiring);
     $stmt->bindParam(':work_mode', $work_mode);
     $stmt->execute();
-    header("Location: read_department.php");
+    header("Location: read.php");
     exit();
 }
 

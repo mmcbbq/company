@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     $conn = new PDO('mysql:host=localhost;dbname=company', 'phpstorm', '123456');
     $sql = 'SELECT * FROM department where id = :id';
-    $id = $_GET['id'];
+//    $id = $_GET['id'];
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id',$id);
     $stmt->execute();
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     $stmt->bindParam(':hallopeter', $work_mode);
     $stmt->execute();
 
-    header('Location: read_department.php');
+    header('Location: /department/read');
     exit();
 }
 
