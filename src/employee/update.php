@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === 'GET') {
-    $id = $_GET['id'];
+//    $id = $_GET['id'];
     $conn = new PDO('mysql:host=localhost;dbname=company', 'phpstorm', '123456');
     $sql = 'Select * from employees where id = :id';
     $stmt = $conn->prepare($sql);
@@ -32,10 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] === 'GET') {
 </form>
 <?php
 }elseif ($_SERVER['REQUEST_METHOD'] === 'POST'){
-
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
-    $id = $_POST['id'];
+//    $id = $_POST['id'];
     $conn = new PDO('mysql:host=localhost;dbname=company','phpstorm','123456');
     $sql = "UPDATE  employees set fname = :fname , lname = :lname where id = :id";
     $stmt = $conn->prepare($sql);

@@ -16,8 +16,8 @@
     <div>Department</div>
     <div>
         <ul>
-            <li><a href='create_department.php'>create</a></li>
-            <li><a href='read_department.php'>show</a></li>
+            <li><a href='/department/create'>create</a></li>
+            <li><a href='/department/read'>show</a></li>
 
         </ul>
     </div>
@@ -25,8 +25,8 @@
 <div>Employees</div>
 <div>
     <ul>
-        <li><a href='firstcreate.php'>create</a></li>
-        <li><a href='firstread.php'>show</a></li>
+        <li><a href='/employee/create'>create</a></li>
+        <li><a href='/employee/read'>show</a></li>
 
     </ul>
 </div>

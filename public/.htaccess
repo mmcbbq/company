@@ -1,13 +1,25 @@
+#DirectoryIndex index.php
+#RewriteEngine On
+#
+## If the requested file or directory exists, serve it directly
+#RewriteCond %{REQUEST_FILENAME} -f [OR]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^ - [L]
+#
+## Otherwise, route the request to index.php
+#RewriteRule ^ index.php?url=$1 [L,QSA]
+
+
 DirectoryIndex index.php
 RewriteEngine On
 
-# If the requested file or directory exists, serve it directly
+# Verhindere, dass statische Dateien an index.php umgeleitet werden
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Otherwise, route the request to index.php
-RewriteRule ^ index.php?url=$1 [L,QSA]
+# Alles andere geht an index.php
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
 
 
 

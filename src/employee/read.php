@@ -1,6 +1,4 @@
 <?php
-
-
 function createTable(array $data, array|false $ueberschrifeten = false, string $farbe_1 = 'blue', string $farbe_2 = 'red'): string
 {
     $string = "<table>";
@@ -27,10 +25,10 @@ function createTable(array $data, array|false $ueberschrifeten = false, string $
         }
         $string .= "<td class='link' style='background-color: white'>";
         $id = $user['id'];
-        $string .= "<a href='firstdelete.php?id=$id'>Delete</a>";
+        $string .= "<a href='/employee/delete/$id'>Delete</a>";
         $string .= "</td>";
         $string .= "<td class='link' style='background-color: white'>";
-        $string .= "<a href='firstupdate.php?id=$id'>Update</a>";
+        $string .= "<a href='/employee/update/$id'>Update</a>";
         $string .= "</td>";
         $string .= "</tr>";
     }
