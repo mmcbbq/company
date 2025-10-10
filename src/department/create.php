@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $name = $_POST['name'];
     $work_mode = $_POST['work_mode'] ?? false;
     $is_hiring = $_POST['is_hiring'] ?? 0;
-    $conn = new PDO('mysql:host=localhost;dbname=company', 'phpstorm', '123456');
+    $conn = dbcon();
     $sql = "INSERT INTO department (name, is_hiring, work_mode) values (:name, :is_hiring, :work_mode)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
